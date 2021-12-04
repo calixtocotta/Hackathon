@@ -67,4 +67,25 @@ public class userWeb {
 
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
+    
+    @GetMapping("/emailexist/{email}")
+    public boolean existeEmail(@PathVariable("email") String email) {
+
+        return servicios.existeEmail(email);
+        
+    }
+    
+
+    @GetMapping("/{email}/{password}")
+    public User getEmailAndPassword(@PathVariable("email") String email, @PathVariable("password") String password) {
+
+        User user = servicios.getExistsEmailAndPassword(email, password);
+        if (user == null) {
+
+            User noUser = new User(null, null,  null, null, null, null, null, null);
+
+            return noUser;
+        }
+        return user;
+    }
 }

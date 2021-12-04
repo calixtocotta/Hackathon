@@ -85,4 +85,13 @@ public class userServices {
         }).orElse(aBoolean = false);
         return aBoolean;
     }
+    
+    public boolean existeEmail(String email) {
+        return metodosCrud.existeEmail(email);
+    }
+
+    public User getExistsEmailAndPassword(String email, String password) {
+
+        return metodosCrud.getExistsEmailAndPassword(email, password);
+    }
 }

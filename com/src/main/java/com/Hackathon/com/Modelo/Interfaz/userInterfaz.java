@@ -5,6 +5,7 @@
 package com.Hackathon.com.Modelo.Interfaz;
 
 import com.Hackathon.com.Modelo.User;
+import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -13,4 +14,7 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface userInterfaz extends CrudRepository<User, Integer>{
     
+     public User findAllByEmailAndPassword(String email,String password);
+
+     public Optional<User> findByEmail(String email);
 }

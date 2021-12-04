@@ -5,6 +5,7 @@
 package com.Hackathon.com.Modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "test_question")
-public class TestQuestion {
+public class TestQuestion implements Serializable{
 
     @Id
     @GeneratedValue

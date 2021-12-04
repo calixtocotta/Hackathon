@@ -36,4 +36,13 @@ public class userRepository {
     public void delete(User user) {
         crud.delete(user);
     }
+    
+     public boolean existeEmail(String email){
+            Optional<User> usuario = crud.findByEmail(email);
+            return  !usuario.isEmpty();
+    }
+    
+    public User getExistsEmailAndPassword(String email, String password){
+        return crud.findAllByEmailAndPassword(email, password);
+    }
 }
