@@ -26,7 +26,7 @@ import javax.persistence.Table;
 public class Test implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
     public String hinders;
     public double score;
