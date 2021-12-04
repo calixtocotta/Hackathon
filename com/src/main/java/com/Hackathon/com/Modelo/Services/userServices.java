@@ -56,7 +56,7 @@ public class userServices {
                 if (user.getIdentification()!= null) {
                     e.get().setIdentification(user.getIdentification());
                 }
-                if (user.getCellPhone()!= 0) {
+                if (user.getCellPhone()!= null) {
                     e.get().setCellPhone(user.getCellPhone());
                 }
                 if (user.getEmail()!= null) {

@@ -27,19 +27,19 @@ public class User implements Serializable{
     public Integer id;
     public String name;
     public String identification;
-    public Integer cellPhone;
+    public String cellPhone;
     public String email;
     public String password;
     public Integer age;
     
-    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "test")
-    @JsonIgnoreProperties(value="test")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "user")
+    @JsonIgnoreProperties(value="user")
     private List<Test> test;
 
     public User() {
     }
 
-    public User(Integer id, String name, String identification, Integer cellPhone, String email, String password, Integer age, List<Test> test) {
+    public User(Integer id, String name, String identification, String cellPhone, String email, String password, Integer age, List<Test> test) {
         this.id = id;
         this.name = name;
         this.identification = identification;
@@ -74,11 +74,11 @@ public class User implements Serializable{
         this.identification = identification;
     }
 
-    public Integer getCellPhone() {
+    public String getCellPhone() {
         return cellPhone;
     }
 
-    public void setCellPhone(Integer cellPhone) {
+    public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
     }
 
