@@ -32,6 +32,7 @@ public class Question implements Serializable {
     public String b;
     public String c;
     public String answer;
+    public String review;
 
     @ManyToOne
     @JoinColumn(name = "category")
@@ -45,13 +46,14 @@ public class Question implements Serializable {
     public Question() {
     }
 
-    public Question(Integer id, String description, String a, String b, String c, String answer, Category category, List<TestQuestion> testQuestion) {
+    public Question(Integer id, String description, String a, String b, String c, String answer, String review, Category category, List<TestQuestion> testQuestion) {
         this.id = id;
         this.description = description;
         this.a = a;
         this.b = b;
         this.c = c;
         this.answer = answer;
+        this.review = review;
         this.category = category;
         this.testQuestion = testQuestion;
     }
@@ -104,6 +106,14 @@ public class Question implements Serializable {
         this.answer = answer;
     }
 
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
     public Category getCategory() {
         return category;
     }
@@ -121,5 +131,4 @@ public class Question implements Serializable {
     }
 
     
-
 }

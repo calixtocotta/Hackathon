@@ -65,6 +65,9 @@ public class questionServices {
                 if (question.getAnswer()!= null) {
                     e.get().setAnswer(question.getAnswer());
                 }
+                if (question.getReview()!= null) {
+                    e.get().setAnswer(question.getReview());
+                }
                 return e.get();
             } else {
                 return question;
