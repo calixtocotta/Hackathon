@@ -66,7 +66,10 @@ public class questionServices {
                     e.get().setAnswer(question.getAnswer());
                 }
                 if (question.getReview()!= null) {
-                    e.get().setAnswer(question.getReview());
+                    e.get().setReview(question.getReview());
+                }
+                if (question.getDifficulty()!= null) {
+                    e.get().setDifficulty(question.getDifficulty());
                 }
                 return e.get();
             } else {

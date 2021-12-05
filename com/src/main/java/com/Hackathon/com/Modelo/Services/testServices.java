@@ -50,8 +50,8 @@ public class testServices {
         } else {
             Optional<Test> e = metodosCrud.getTest(test.getId());
             if (!e.isEmpty()) {
-                if (test.getHinders() != null) {
-                    e.get().setHinders(test.getHinders());
+                if (test.getDifficulty() != null) {
+                    e.get().setDifficulty(test.getDifficulty());
                 }
                 if (test.getQuality() != null) {
                     e.get().setQuality(test.getQuality());

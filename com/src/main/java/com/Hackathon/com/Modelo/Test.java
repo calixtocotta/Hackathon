@@ -28,7 +28,7 @@ public class Test implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
-    public String hinders;
+    public String difficulty;
     public String quality;
     public double score;
 
@@ -44,9 +44,9 @@ public class Test implements Serializable {
     public Test() {
     }
 
-    public Test(Integer id, String hinders, String quality, double score, User user, List<TestQuestion> testQuestion) {
+    public Test(Integer id, String difficulty, String quality, double score, User user, List<TestQuestion> testQuestion) {
         this.id = id;
-        this.hinders = hinders;
+        this.difficulty = difficulty;
         this.quality = quality;
         this.score = score;
         this.user = user;
@@ -61,12 +61,12 @@ public class Test implements Serializable {
         this.id = id;
     }
 
-    public String getHinders() {
-        return hinders;
+    public String getDifficulty() {
+        return difficulty;
     }
 
-    public void setHinders(String hinders) {
-        this.hinders = hinders;
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 
     public String getQuality() {

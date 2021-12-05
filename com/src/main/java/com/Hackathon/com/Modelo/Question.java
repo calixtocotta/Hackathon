@@ -34,6 +34,8 @@ public class Question implements Serializable {
     public String c;
     public String answer;
     public String review;
+    public String difficulty;
+
 
     @ManyToOne
     @JoinColumn(name = "category")
@@ -45,9 +47,10 @@ public class Question implements Serializable {
     private List<TestQuestion> testQuestion;
 
     public Question() {
+        
     }
 
-    public Question(Integer id, String description, String a, String b, String c, String answer, String review, Category category, List<TestQuestion> testQuestion) {
+    public Question(Integer id, String description, String a, String b, String c, String answer, String review, String difficulty, Category category, List<TestQuestion> testQuestion) {
         this.id = id;
         this.description = description;
         this.a = a;
@@ -55,6 +58,7 @@ public class Question implements Serializable {
         this.c = c;
         this.answer = answer;
         this.review = review;
+        this.difficulty = difficulty;
         this.category = category;
         this.testQuestion = testQuestion;
     }
@@ -115,6 +119,14 @@ public class Question implements Serializable {
         this.review = review;
     }
 
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public Category getCategory() {
         return category;
     }
@@ -130,6 +142,6 @@ public class Question implements Serializable {
     public void setTestQuestion(List<TestQuestion> testQuestion) {
         this.testQuestion = testQuestion;
     }
-
+    
     
 }
