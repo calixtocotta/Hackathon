@@ -51,6 +51,10 @@ table > tbody > tr>td{
     left: 100px;
 }
 
+.col-md-7{
+    margin-right:auto;
+    margin-left: auto;
+}
 .d-flex{
 
     display: flex;
