@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
-      <meta charset="UTF-8">
-      <link rel="apple-touch-icon" sizes="76x76" href="assets/images/web.png">
-      <link rel="icon" type="image/png" href="assets/images/web.png">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Iniciar Sesion</title>
-      
-      <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-      
-      <link rel="stylesheet" href="assets/css/login.css">
-   </head>
-   <body>
-      <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-         <div class="container">
-            <div class="card login-card">
-               <div class="row no-gutters">
-                  <div class="col-md-5">
-                     <img src="assets/images/login_img.jpg" alt="login" class="login-card-img">
-                  </div>
-                  <div class="col-md-7">
-                     <div class="card-body">
-                        <div class="brand-wrapper">
-                           <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
-                        </div>
-                        <p class="login-card-description">¡Bienvenid@!</p>
-                        <p class="login-card-description" id="name"></p>
-                        <p onclick="cerrar()">Cerrar sesion</p>
-                        
-                        
-                        <nav class="login-card-footer-nav">
-                           <a href="#!">Condiciones de uso.</a>
-                           <a href="#!">Política de privacidad</a>
-                        </nav>
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="apple-touch-icon" sizes="76x76" href="assets/images/web.png">
+   <link rel="icon" type="image/png" href="assets/images/web.png">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Página Principal</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+   <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+      <div class="container">
+         <div class="card login-card">
+            <div class="row no-gutters">
+               <div class="col-md-5">
+                  <img src="assets/images/login_img.jpg" alt="login" class="login-card-img">
+               </div>
+               <div class="col-md-7">
+                  <div class="card-body">
+                     <div class="brand-wrapper">
+                        <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
                      </div>
+                     <p class="login-card-description">¡Bienvenid@!</p>
+                     <p class="login-card-description" id="name"></p>
+                     <input name="inciar" id="iniTest" class="btn btn-block btn-wd login-btn" type="button"
+                        value="Iniciar Test">
+                     <p onclick="cerrar()">Cerrar sesion</p>
+
+
+                     <nav class="login-card-footer-nav">
+                        <a href="#!">Condiciones de uso.</a>
+                        <a href="#!">Política de privacidad</a>
+                     </nav>
                   </div>
                </div>
             </div>
          </div>
-      </main>
-      
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-      <script src="assets/js/traduccionesValidate.js"></script>
-      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      </div>
+   </main>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+   <script src="assets/js/traduccionesValidate.js"></script>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <script src="assets/js/menu.js"></script>
 
    <script>
       let firstData = null;
-    //console.log(localStorage.getItem("object_name"))
+      //console.log(localStorage.getItem("object_name"))
       //if para verificar que si se inicio sesion
-      if(localStorage.getItem("object_name")!=null){
+      if (localStorage.getItem("object_name") != null) {
          let myData = localStorage.getItem("object_name");
          //localStorage.removeItem( 'object_name' ); // Clear the localStorage
          firstData = JSON.parse(myData);
          $("#name").html(firstData.name);
-      }else{
+      } else {
          cerrar()
       }
 
-      function cerrar(){
-         $(document).ready(function(){
-               localStorage.removeItem( 'object_name' );
-               $(location).attr('href',"index.html");
+      function cerrar() {
+         $(document).ready(function () {
+            localStorage.removeItem('object_name');
+            $(location).attr('href', "index.html");
          });
       }
+
    </script>
-   </body>
+</body>
+
 </html>
