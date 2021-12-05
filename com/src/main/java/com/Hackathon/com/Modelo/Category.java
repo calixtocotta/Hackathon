@@ -29,7 +29,7 @@ public class Category implements Serializable {
     public String name;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category")
-    @JsonIgnoreProperties(value = "category")
+    @JsonIgnoreProperties(value = {"category","testQuestion"})
     private List<Question> question;
 
     public Category() {

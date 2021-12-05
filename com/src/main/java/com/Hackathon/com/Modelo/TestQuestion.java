@@ -25,22 +25,22 @@ public class TestQuestion implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
-    public double answer;
+    public boolean answer;
 
     @ManyToOne
     @JoinColumn(name = "question")
-    @JsonIgnoreProperties(value = "test_question")
+    @JsonIgnoreProperties(value = {"testQuestion","question"})
     private Question question;
 
     @ManyToOne
     @JoinColumn(name = "test")
-    @JsonIgnoreProperties(value = "test_question")
+    @JsonIgnoreProperties(value = {"testQuestion","user"})
     private Test test;
 
     public TestQuestion() {
     }
 
-    public TestQuestion(Integer id, double answer, Question question, Test test) {
+    public TestQuestion(Integer id, boolean answer, Question question, Test test) {
         this.id = id;
         this.answer = answer;
         this.question = question;
@@ -55,11 +55,11 @@ public class TestQuestion implements Serializable{
         this.id = id;
     }
 
-    public double getAnswer() {
+    public boolean getAnswer() {
         return answer;
     }
 
-    public void setAnswer(double answer) {
+    public void setAnswer(boolean answer) {
         this.answer = answer;
     }
 

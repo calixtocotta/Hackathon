@@ -6,7 +6,7 @@
       <link rel="icon" type="image/png" href="assets/images/web.png">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Iniciar Sesion</title>
+      <title>Menu Usuario</title>
       
       <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
@@ -16,6 +16,7 @@
          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
       
       <link rel="stylesheet" href="assets/css/login.css">
+      <link rel="stylesheet" href="assets/css/estilo.css">
    </head>
    <body>
       <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
@@ -23,18 +24,39 @@
             <div class="card login-card">
                <div class="row no-gutters">
                   <div class="col-md-5">
-                     <img src="assets/images/login_img.jpg" alt="login" class="login-card-img">
+                     
                   </div>
                   <div class="col-md-7">
                      <div class="card-body">
                         <div class="brand-wrapper">
                            <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
                         </div>
-                        <p class="login-card-description">¡Bienvenid@!</p>
+                        <p class="login-card-description"> </p>
                         <p class="login-card-description" id="name"></p>
+                        <div class="d-flex" id="img-contenedor">
+                           <table  borde="3" align="center">
+                               <tr align="center" >
+                                   <td onclick="location.href='test.html'">
+                                       <div style="height: 100px;">
+                                           <img class="imagenes" src="assets/images/test-icono.png">
+                                       </div>
+                                           <h1>Realizar test</h1>
+                                   </td>
+                               </tr>
+                               <tr align="center">
+                                   <td onclick="location.href='adminRegistrarClothe.html'">
+                                       <div style="height: 100px;">
+                                           <img class="imagenes" src="assets/images/new-test.png">
+                                       </div>
+                                           <h1>Registrar Test</h1>
+                                   </td>
+                               </tr>
+                           </table>
+                       </div>
+                        <di>
+                           <a>Realizar test</a>
+                        </di>
                         <p onclick="cerrar()">Cerrar sesion</p>
-                        
-                        
                         <nav class="login-card-footer-nav">
                            <a href="#!">Condiciones de uso.</a>
                            <a href="#!">Política de privacidad</a>

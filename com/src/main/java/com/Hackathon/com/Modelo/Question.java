@@ -39,7 +39,7 @@ public class Question implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "category")
-    @JsonIgnoreProperties(value = "question")
+    @JsonIgnoreProperties(value = {"question","testQuestion"})
     private Category category;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "question")

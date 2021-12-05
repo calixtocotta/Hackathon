@@ -43,8 +43,7 @@ function traerUsuarios() {
         type: "GET",
         datatype: "JSON",
         success: function(response) {
-            console.log(response)
-                swal("Registro exitoso", "En unos segundos sera redireccionado!", "success");
+            //console.log(response)
 
             //Guardar datos de usuario
             let data = {
@@ -58,7 +57,7 @@ function traerUsuarios() {
                     $(document).ready(function(){
                         $(location).attr('href',"menuUser.html");
                     });
-                }, 10000
+                }, 1000
             );
             
         },

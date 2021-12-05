@@ -8,6 +8,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Iniciar Sesion</title>
       
+      
       <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -22,16 +23,38 @@
          <div class="container">
             <div class="card login-card">
                <div class="row no-gutters">
-                  <div class="col-md-5">
-                     <img src="assets/images/login_img.jpg" alt="login" class="login-card-img">
-                  </div>
+                  <div class="col-md-5"><br><br>
+                     <p class="login-card-description">🚲 ¡Noticias movidilidad <br> segura y saludable! 🛴 </p>
+                        <div class="brand-wrapper">
+                        <div class="col-md-1"></div>
+                        <div class="carousel">
+                           
+                           <button id="retroceder">Retroceder</button>
+                           <button id="play">Play</button>
+                           <button id="stop" disabled>Stop</button>
+                           <button id="avanzar">Avanzar</button>
+                           
+                       </div>
+                       
+                       <div class="controles">
+                       </div>
+                       <img src="assects/gallery/00.jpg" style="display: none">
+                       <img src="assects/gallery/01.jpg" style="display: none">
+                       <img src="assects/gallery/03.jpg" style="display: none">
+                       <img src="assects/gallery/04.jpg" style="display: none">
+                       <img src="assects/gallery/05.jpg" style="display: none">
+                       <img src="assects/gallery/06.jpg" style="display: none">
+                       <img src="assects/gallery/07.jpg" style="display: none">
+                       
+                     </div> 
+                     <div id="imagen"></div>
+                     </div>
                   <div class="col-md-7">
                      <div class="card-body">
                         <div class="brand-wrapper">
-                           <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
+                           <img src="assets/images/login_Logo.png" alt="logo" class="logo">
                         </div>
-                        <p class="login-card-description">¡Bienvenid@!</p>
-                        
+                        <p class="login-card-description">🚲 ¡Bienvenidos! 🛴 </p>
                         <form action="javascript:traerUsuarios()" id="formulario" name="form">
                            <div class="form-group">
                               <i class="fas fa-envelope form-control-feedback" aria-hidden="true"></i>
@@ -54,9 +77,15 @@
                            cuenta aquí.
                            <i class="fas fa-arrow-circle-right"></i></a>
                         </p>
+                        <div class="card-body">
+            
+                          
+                           <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ecc1a47193e29e4" async="async"></script>
+                           <div class="addthis_sharing_toolbox"></div>
+                       </div>
                         <nav class="login-card-footer-nav">
-                           <a href="#!">Condiciones de uso.</a>
-                           <a href="#!">Política de privacidad</a>
+                           <a href="#!"> 🛵 Condiciones de uso.  🛴 </a>
+                           <a href="#!"> 🚴🏿 Política de privacidad  🏇 </a>
                         </nav>
                      </div>
                   </div>
@@ -69,6 +98,7 @@
          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
       <script src="assets/js/traduccionesValidate.js"></script>
+      <script src="assets/js/carousel.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <script src="assets/js/iniciosesion.js"></script>

@@ -50,7 +50,7 @@ public class testQuestionServices {
         } else {
             Optional<TestQuestion> e = metodosCrud.getTestQuestion(testQuestion.getId());
             if (!e.isEmpty()) {
-                if (testQuestion.getAnswer()!= 0.0) {
+                if (testQuestion.getAnswer()!= false) {
                     e.get().setAnswer(testQuestion.getAnswer());
                 }
                 if (testQuestion.getQuestion()!= null) {
