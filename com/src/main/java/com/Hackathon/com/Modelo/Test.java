@@ -31,6 +31,8 @@ public class Test implements Serializable {
     public String difficulty;
     public String quality;
     public double score;
+    public Integer minutes;
+    public Integer seconds;
 
     @ManyToOne
     @JoinColumn(name = "user")
@@ -44,11 +46,13 @@ public class Test implements Serializable {
     public Test() {
     }
 
-    public Test(Integer id, String difficulty, String quality, double score, User user, List<TestQuestion> testQuestion) {
+    public Test(Integer id, String difficulty, String quality, double score, Integer minutes, Integer seconds, User user, List<TestQuestion> testQuestion) {
         this.id = id;
         this.difficulty = difficulty;
         this.quality = quality;
         this.score = score;
+        this.minutes = minutes;
+        this.seconds = seconds;
         this.user = user;
         this.testQuestion = testQuestion;
     }
@@ -83,6 +87,22 @@ public class Test implements Serializable {
 
     public void setScore(double score) {
         this.score = score;
+    }
+
+    public Integer getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(Integer minutes) {
+        this.minutes = minutes;
+    }
+
+    public Integer getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(Integer seconds) {
+        this.seconds = seconds;
     }
 
     public User getUser() {

@@ -59,6 +59,12 @@ public class testServices {
                 if (test.getScore() != 0.0) {
                     e.get().setScore(test.getScore());
                 }
+                if (test.getMinutes()!= 0) {
+                    e.get().setMinutes(test.getMinutes());
+                }
+                if (test.getSeconds()!= 0.0) {
+                    e.get().setSeconds(test.getSeconds());
+                }
                 if (test.getUser() != null) {
                     e.get().setUser(test.getUser());
                 }
