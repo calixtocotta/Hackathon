@@ -29,13 +29,14 @@ public class Test implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
     public String hinders;
+    public String quality;
     public double score;
 
     @ManyToOne
     @JoinColumn(name = "user")
     @JsonIgnoreProperties(value = "test")
     private User user;
-    
+
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "test")
     @JsonIgnoreProperties(value = "test")
     private List<TestQuestion> testQuestion;
@@ -43,9 +44,10 @@ public class Test implements Serializable {
     public Test() {
     }
 
-    public Test(Integer id, String hinders, double score, User user, List<TestQuestion> testQuestion) {
+    public Test(Integer id, String hinders, String quality, double score, User user, List<TestQuestion> testQuestion) {
         this.id = id;
         this.hinders = hinders;
+        this.quality = quality;
         this.score = score;
         this.user = user;
         this.testQuestion = testQuestion;
@@ -65,6 +67,14 @@ public class Test implements Serializable {
 
     public void setHinders(String hinders) {
         this.hinders = hinders;
+    }
+
+    public String getQuality() {
+        return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
     }
 
     public double getScore() {
@@ -90,7 +100,5 @@ public class Test implements Serializable {
     public void setTestQuestion(List<TestQuestion> testQuestion) {
         this.testQuestion = testQuestion;
     }
-
-    
 
 }

@@ -4,7 +4,8 @@
  */
 package com.Hackathon.com.Modelo.Web;
 
-import com.Hackathon.com.Modelo.Services.testQuestionServices;
+import com.Hackathon.com.Modelo.Services.testServices;
+import com.Hackathon.com.Modelo.Test;
 import com.Hackathon.com.Modelo.TestQuestion;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,22 +32,22 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class testWeb {
     @Autowired
-    private testQuestionServices servicios;
+    private testServices servicios;
 
     @GetMapping("/all")
-    public List<TestQuestion> getAll() {
+    public List<Test> getAll() {
         return servicios.getAll();
     }
 
     @GetMapping("/{id}")
-    public TestQuestion getTestQuestion(@PathVariable Integer id) {
-        return servicios.getTestQuestion(id).orElse(null);
+    public Test getTest(@PathVariable Integer id) {
+        return servicios.getTest(id).orElse(null);
     }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<TestQuestion> save(@RequestBody TestQuestion testQuestion) throws Exception {
-        TestQuestion u = servicios.save(testQuestion);
+    public ResponseEntity<Test> save(@RequestBody Test test) throws Exception {
+        Test u = servicios.save(test);
 
         return new ResponseEntity(u, HttpStatus.CREATED);
 
@@ -54,8 +55,8 @@ public class testWeb {
 
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity update(@RequestBody TestQuestion testQuestion) {
-        TestQuestion u = servicios.update(testQuestion);
+    public ResponseEntity update(@RequestBody Test test) {
+        Test u = servicios.update(test);
 
         return new ResponseEntity(u, HttpStatus.CREATED);
     }
@@ -63,7 +64,7 @@ public class testWeb {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity delete(@PathVariable("id") int Id) {
-        servicios.deleteTestQuestion(Id);
+        servicios.deleteTest(Id);
 
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
