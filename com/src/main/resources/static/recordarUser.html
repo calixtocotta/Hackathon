@@ -30,38 +30,21 @@
                         <p class="login-card-description"> </p>
                         <p class="login-card-description" id="name"></p>
                         <div class="d-flex" id="img-contenedor">
-                           <table  borde="3" align="center">
-                               <tr align="center" >
-                                   <td onclick="location.href='test.html'">
-                                       <div style="height: 100px;">
-                                           <img class="imagenes" src="assets/images/test-icono.png">
-                                       </div>
-                                           <h1>Realizar test</h1>
-                                   </td>
-                                   <td onclick="location.href='insertarPregunta.html'">
-                                       <div style="height: 100px;">
-                                           <img class="imagenes" src="assets/images/new-test.png">
-                                       </div>
-                                           <h1>Registrar Test</h1>
-                                   </td>
-                               </tr>
-                               <tr align="center">
-                                 <td onclick="location.href='ranking.html'">
-                                     <div style="height: 100px;">
-                                         <img class="imagenes" src="assets/images/top.jpg">
-                                     </div>
-                                         <h1>Ranking</h1>
-                                 </td>
-                              <td onclick="location.href='recordarUser.html'">
-                                 <div style="height: 100px;">
-                                 <img class="imagenes" src="assets/images/recordarUser.png">
-                                 </div>
-                                    <h1>Recordar credenciales</h1>
-                              </td>
-                           </tr>
-                           </table>
+                           
+                              <div class="form-group" id="recordarUser">
+                                 <i class="fas fa-lock form-control-feedback" aria-hidden="true"></i>
+                                 <input type="password" name="password" id="password" class="form-control" placeholder="***********"
+                                    required>
+                                    <p id="validar">Ingrese su contraseña</p>
+                              </div>
+                           
+                              <div class="btnLog col-md-12">
+                                 <button class="btn btn-block btn-wd login-btn" value="Recordar" onclick="validar(firstData.id)"> Recordar </button>
+                              </div>
+                              
                         </div>
-
+                        <di>
+                        </di>
                         <p onclick="cerrar()">Cerrar sesion</p>
                         <nav class="login-card-footer-nav">
                            <a href="#!">Condiciones de uso.</a>
@@ -79,6 +62,7 @@
       <script src="assets/js/traduccionesValidate.js"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="assets/js/recordarCredenciales.js"></script>
 
    <script>
       let firstData = null;

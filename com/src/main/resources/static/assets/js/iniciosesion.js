@@ -46,20 +46,26 @@ function traerUsuarios() {
             //console.log(response)
 
             //Guardar datos de usuario
-            let data = {
-                'id': response.id,
-                'name' : response.name
-            };
-            //Guardo los datos en un almacenamiento loca con el nombre de object_name y le envio los datos como js
-            localStorage.setItem("object_name", JSON.stringify(data));
-            setTimeout(
-                function(){ 
-                    $(document).ready(function(){
-                        $(location).attr('href',"menuUser.html");
-                    });
-                }, 1000
-            );
-            
+            console.log(response.id);
+            if(response.id==null){
+                swal("Validación", "Error en la aplicacion, comuniquese conel administrador del sistema", "error");
+            }else{
+                let data = {
+                    'id': response.id,
+                    'name' : response.name
+                };
+                //Guardo los datos en un almacenamiento loca con el nombre de object_name y le envio los datos como js
+                localStorage.setItem("object_name", JSON.stringify(data));
+
+                setTimeout(
+                    function(){ 
+                        $(document).ready(function(){
+                            $(location).attr('href',"menuUser.html");
+                        });
+                    }, 1000
+                );
+
+                }
         },
         error: function(jqXHR, textStatus, errorThrown) {
             swal("Validación", "Error en la aplicacion, comuniquese conel administrador del sistema", "error");

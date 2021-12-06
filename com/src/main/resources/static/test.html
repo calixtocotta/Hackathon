@@ -17,7 +17,6 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 
 <body>
@@ -25,12 +24,16 @@
         <div class="container">
             <div class="card login-card">
                 <div class="row no-gutters">
+                    <div class="col-md-5">
+                        
+                    </div>
                     <div class="col-md-7">
                         <div class="card-body">
                             <div class="brand-wrapper">
                                 <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
                             </div>
                             <p class="login-card-description">Pregunta:</p>
+
                             <form id="formulario" name="form">
                                 <div class="form-group">
                                     <label id="textoPregunta"></label>
@@ -49,8 +52,13 @@
                                 </div>
                             </form>
                             <p class="login-card-description" id="validacion"></p>
+                            <p class="login-card-description" id="reseña"></p>
                             <br>
                             <br>
+                            <div class="btnLog col-md-12">
+                                <input name="siguiente" id="siguiente" class="btn btn-block btn-wd login-btn" type="button"
+                                    value="Siguiente" disabled>
+                            </div>
                             <div class="btnLog col-md-12">
                                 <input name="salir" id="salir" class="btn btn-block btn-wd login-btn" type="button"
                                     value="Salir">
@@ -77,7 +85,9 @@
             let myData = localStorage.getItem("object_name");
             //localStorage.removeItem( 'object_name' ); // Clear the localStorage
             firstData = JSON.parse(myData);
-            $("#name").html(firstData.name);
+            //console.log(firstData.name+firstData.id);
+            
+            test(firstData.id);
         } else {
             cerrar()
         }
@@ -88,7 +98,7 @@
                 $(location).attr('href', "index.html");
             });
         }
-        preguntas();
+        
     </script>
 </body>
 

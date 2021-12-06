@@ -1,5 +1,19 @@
 
 
+#contenedor{
+  width: 800px;
+  margin-right:auto;
+  margin-left: auto;
+}
+#recordarUser{
+  width: 400px;
+  margin-right:auto;
+  margin-left: auto;
+}
+#validar{
+  text-align: center;
+}
+
 body {
   font-family: "Karla", sans-serif;
   min-height: 100vh; 
