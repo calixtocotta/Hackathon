@@ -43,6 +43,11 @@ public class testWeb {
     public Test getTest(@PathVariable Integer id) {
         return servicios.getTest(id).orElse(null);
     }
+    
+    @GetMapping("/Score")
+    public List<Test> ScoreDesc() {
+        return servicios.ScoreDesc();
+    }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)

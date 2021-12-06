@@ -28,6 +28,9 @@ public class testServices {
     public Optional<Test> getTest(int id) {
         return metodosCrud.getTest(id);
     }
+    public List<Test> ScoreDesc(){
+        return metodosCrud.ScoreDesc();
+    }
 
     public Test save(Test test) {
         if (test.getId() == null) {

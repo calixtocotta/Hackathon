@@ -5,6 +5,7 @@
 package com.Hackathon.com.Modelo.Interfaz;
 
 import com.Hackathon.com.Modelo.Test;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -12,5 +13,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author calix
  */
 public interface testInterfaz extends CrudRepository<Test, Integer>{
-    
+    public List<Test> findAllByOrderByScoreDesc();
 }

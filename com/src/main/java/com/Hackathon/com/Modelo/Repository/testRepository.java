@@ -28,6 +28,9 @@ public class testRepository {
     public Optional<Test> getTest(int id) {
         return crud.findById(id);
     }
+    public List<Test> ScoreDesc() {
+        return crud.findAllByOrderByScoreDesc();
+    }
 
     public Test save(Test test) {
         return crud.save(test);
