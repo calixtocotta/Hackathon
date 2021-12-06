@@ -27,14 +27,21 @@ function preguntas() {
         type: "GET",
         datatype: "JSON",
         success: function (response) {
-            let numero = numeroAleatorio();
+            let maximo=response.length;
+            let numero = numeroAleatorio(maximo-1);
             $("#textoPregunta").html(response[numero].description);
             $("#a").val(response[numero].a);
             $("#b").val(response[numero].b);
             $("#c").val(response[numero].c);
             respuesta = response[numero].answer;
-            console.log(response[numero].description);
-            console.log(numero);
+            setTimeout(
+                function () {
+                    $(document).ready(function () {
+                        preguntas();
+                    });
+                }, 4000
+            );
+            $("#validacion").html("");
         },
         error: function (jqXHR, textStatus, errorThrown) {
             swal("Validación", "Error en la aplicacion, comuniquese conel administrador del sistema", "error");
@@ -42,8 +49,8 @@ function preguntas() {
     });
 }
 
-function numeroAleatorio() {
-    return Math.round(Math.random() * (2 - 0) + 0);
+function numeroAleatorio(max) {
+    return Math.round(Math.random() * (max - 0) + 0);
 }
 
 $("#a").click(function(){
@@ -70,6 +77,6 @@ $("#c").click(function(){
     }
 })
 
-$("#salir").click(function(){
+$("#exit").click(function(){
     $(location).attr('href', "menuUser.html");
 })

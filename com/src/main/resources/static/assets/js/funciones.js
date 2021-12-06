@@ -2,7 +2,7 @@
  * 
  * 
  */
- $("#formularioReg").validate({
+$("#formularioReg").validate({
     rules: {
         name: {
             required: true,
@@ -46,12 +46,11 @@
 /**
  * 
  */
-$("#registrar").click(function() {
-    if ($("#formularioReg").valid() == false) 
-    {
+$("#registrar").click(function () {
+    if ($("#formularioReg").valid() == false) {
         return;
-    } 
-    if ($("#password").val()==$("#password_confirm").val()){
+    }
+    if ($("#password").val() == $("#password_confirm").val()) {
         /*
         let name = $("#name").val()
         let identification = $("#identification").val()
@@ -60,13 +59,12 @@ $("#registrar").click(function() {
         let password = $("#password").val()
         let age = $("#age").val()
         */
-        guardarUsuarios
+        guardarUsuarios();
     }
-    else
-    { 
+    else {
         swal("la contraseña no coincide", "Validación incorrecta", "error");
     }
-    })
+})
 
 
 /**
@@ -79,20 +77,20 @@ function guardarUsuarios() {
         url: "http://144.22.228.79:80/api/user/emailexist/" + email,
         type: "GET",
         datatype: "JSON",
-        success: function(response) {
+        success: function (response) {
             //console.log(response)
             if (response == true) {
                 swal("El usuario ya existe, valide los datos o ingrese al sistema por el Login", "Validación Incorrecta", "error");
             } else {
-                let myData={
-                    name:$("#name").val(),
-                    identification:$("#identification").val(),
-                    cellPhone:$("#cellPhone").val(),
-                    email:$("#email").val(),
-                    password:$("#password").val(),
-                    age:$("#age").val()
+                let myData = {
+                    name: $("#name").val(),
+                    identification: $("#identification").val(),
+                    cellPhone: $("#cellPhone").val(),
+                    email: $("#email").val(),
+                    password: $("#password").val(),
+                    age: $("#age").val()
                 };
-                let dataToSend=JSON.stringify(myData);
+                let dataToSend = JSON.stringify(myData);
                 //console.log(dataToSend);
                 $.ajax({
                     type: 'POST',
@@ -100,17 +98,18 @@ function guardarUsuarios() {
                     dataType: 'JSON',
                     data: dataToSend,
                     url: "http://144.22.228.79:80/api/user/new",
-                    success: function(response) {
+                    success: function (response) {
                         swal("Cuenta creada de forma correcta", "Validación Correcta", "success");
                         $(".form-control").val("");
+                        $(location).attr('href', "index.html");
                     },
-                    error: function(jqXHR, textStatus, errorThrown) {
+                    error: function (jqXHR, textStatus, errorThrown) {
                         swal("No se guardo correctamente, valido los campos", "Validación Incorrecta", "error");
                     }
                 });
             }
         },
-        error: function(jqXHR, textStatus, errorThrown) {
+        error: function (jqXHR, textStatus, errorThrown) {
             swal("Validación", "Error en la aplicacion, comuniquese conel administrador del sistema", "error");
         }
     });
