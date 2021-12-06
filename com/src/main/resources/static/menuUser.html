@@ -36,21 +36,21 @@
                                        <div style="height: 100px;">
                                            <img class="imagenes" src="assets/images/test-icono.png">
                                        </div>
-                                           <h1>Realizar test</h1>
+                                           <h1>Iniciar Test</h1>
                                    </td>
-                                   <td onclick="location.href='adminRegistrarClothe.html'">
+                                   <td onclick="location.href='insertarPregunta.html'">
                                        <div style="height: 100px;">
                                            <img class="imagenes" src="assets/images/new-test.png">
                                        </div>
-                                           <h1>Registrar Test</h1>
+                                           <h1>Crear una pregunta</h1>
                                    </td>
                                </tr>
                                <tr align="center">
-                                 <td onclick="location.href='adminRegistrarClothe.html'">
+                                 <td onclick="location.href='ranking.html'">
                                      <div style="height: 100px;">
                                          <img class="imagenes" src="assets/images/new-test.png">
                                      </div>
-                                         <h1>Top</h1>
+                                         <h1>Ranking</h1>
                                  </td>
                               <td onclick="location.href='adminRegistrarClothe.html'">
                                  <div style="height: 100px;">
@@ -61,9 +61,6 @@
                            </tr>
                            </table>
                         </div>
-                        <di>
-                           <a>Realizar test</a>
-                        </di>
                         <p onclick="cerrar()">Cerrar sesion</p>
                         <nav class="login-card-footer-nav">
                            <a href="#!">Condiciones de uso.</a>
@@ -90,7 +87,7 @@
          let myData = localStorage.getItem("object_name");
          //localStorage.removeItem( 'object_name' ); // Clear the localStorage
          firstData = JSON.parse(myData);
-         $("#name").html(firstData.name);
+         $("#name").html("Bienvenido "+firstData.name);
       }else{
          cerrar()
       }
