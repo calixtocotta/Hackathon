@@ -6,12 +6,9 @@ function traerInformacion(){
         success: function (response) {
             console.log(response);
             pintar(response);
-            let ranking;
+
             for (i=0; i<response.length; i++ ){
-                ranking+=[{
-                    'nombre': response[i].user.name,
-                    'score': response[i].score
-                }]
+
             }
             console.log(ranking);
         },
