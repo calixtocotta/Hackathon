@@ -15,35 +15,29 @@
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="assets/css/login.css">
+        <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/registrar.css">
 </head>
 
 <body>
     <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-        <div class="container" >
-            <div class="card login-card" id="contenedor">
-                <div class="row no-gutters" >
-
+        <div class="container">
+            <div class="card login-card">
+                <div class="row no-gutters">
+                    <div class="col-md-2">
+                        
+                    </div>
+                    <div class="col-md-8">
                         <div class="card-body">
                             <div class="brand-wrapper">
-                                <img src="assets/images/login_Logo.svg" alt="logo" class="logo">
+                                <img src="assets/images/login_LogoInsertarpregunta.png" alt="logo" class="logo">
                             </div>
-                            <p class="login-card-description">En este espacio podrá crear una pregunta para que sea
+                            <p class="login-card-description"> En este espacio podrá crear una pregunta para que sea
                                 integrada al test. Por favor ingrese el enunciado:</p>
-
+                            
                             <form id="formulario" name="form">
-                                
                                 <div class="form-group">
                                     <textarea class="form-control" id="pregunta" rows="1"></textarea>
-                                </div>
-                                <p class="login-card-description">¿A cual categoría pertenecerá la pregunta?:</p>
-                                <div class="form-group">
-                                    <select class="form-control" id="categoria">
-                                        <option>Bicicleta</option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
                                 </div>
                                 <p class="login-card-description">Ahora ingrese las opciones de respuesta sobre cada
                                     botón:</p>
@@ -59,25 +53,12 @@
                                 <br>
                                 <p class="login-card-description">¿Cuál de las anteriores opciones es la respuesta?:</p>
                                 <div class="form-group">
-                                    <select class="form-control" id="respuesta">
-                                        <option>a</option>
-                                        <option>b</option>
-                                        <option>c</option>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                      <option>a</option>
+                                      <option>b</option>
+                                      <option>c</option>
                                     </select>
-                                </div>
-                                <p class="login-card-description">Coloque una pequeña sustentación de la pregunta:</p>
-                                <div class="form-group">
-                                    <textarea class="form-control" id="review" rows="1" placeholder="Ej: Es la A debido que..."></textarea>
-                                </div>
-                                <p class="login-card-description">¿Qúe tan difícil considera que es su pregunta?:</p>
-                                <div class="form-group">
-                                    <select class="form-control" id="dificultad">
-                                        <option>Fácil</option>
-                                        <option>Dificil</option>
-                                        <option>Medio</option>
-                                    </select>
-                                </div>
-                                <br>
+                                  </div>
                                 <div class="btnLog col-md-12">
                                     <input name="enviar" id="enviar" class="btn btn-block btn-wd login-btn"
                                         type="button" value="Enviar pregunta">
@@ -89,10 +70,9 @@
                             <div class="btnLog col-md-12">
                                 <input name="salir" id="salir" class="btn btn-block btn-wd login-btn" type="button"
                                     value="Salir">
-                                    
                             </div>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +86,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="assets/js/nuevaPregunta.js"></script>
     <script>
-
+        
         let firstData = null;
         //console.log(localStorage.getItem("object_name"))
         //if para verificar que si se inicio sesion
@@ -125,7 +105,7 @@
                 $(location).attr('href', "index.html");
             });
         }
-
+        
     </script>
 </body>
 

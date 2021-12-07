@@ -145,6 +145,16 @@ tr {
         
         
     }
+    .container{
+        width: 130%;
+        min-width: auto;
+        margin-left: -35px;
+    }
+    table {
+        width: auto;
+        min-width: auto;
+        font-size: 0.9em;
+        transform: scale(0.5);
 
 }
 

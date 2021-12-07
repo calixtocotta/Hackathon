@@ -17,7 +17,7 @@
 body {
   font-family: "Karla", sans-serif;
   min-height: 100vh; 
-  background-image: url(../images/fondoLoginIzq.png), url(../images/fondoLoginDer.png);
+  background-image: url(../images/fondoLoginIzq.jpg), url(../images/fondoLoginDer.jpg);
   background-position: left, right;
   background-size: 50%, 50%;
   background-repeat: repeat-y, repeat-y;

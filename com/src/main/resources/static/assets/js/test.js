@@ -283,6 +283,9 @@ $("#a").click(function(){
         $("#siguiente").attr("disabled",false);
         answer=false;
     }
+    $("#a").attr("disabled",false);
+    $("#b").attr("disabled",true);
+    $("#c").attr("disabled",true);
     $("#reseña").html(reseña);
 })
 
@@ -296,6 +299,9 @@ $("#b").click(function(){
         $("#siguiente").attr("disabled",false);
         answer=false;
     }
+    $("#a").attr("disabled",true);
+    $("#b").attr("disabled",false);
+    $("#c").attr("disabled",true);
     $("#reseña").html(reseña);
 })
 
@@ -309,6 +315,9 @@ $("#c").click(function(){
         $("#siguiente").attr("disabled",false);
         answer=false;
     }
+    $("#a").attr("disabled",true);
+    $("#b").attr("disabled",true);
+    $("#c").attr("disabled",false);
     $("#reseña").html(reseña);
     
 })

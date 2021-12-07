@@ -1,0 +1,23 @@
+.container{
+    width: 50%;
+  }
+  #validar{
+    text-align: center;
+  }
+  .col-md-7{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-body{
+    width: 170%;
+    margin-left: -110px;
+  }
+  #textoPregunta{
+    text-align: center;
+  }
+  .form-group{
+    text-align: center;
+  }
+  #reseña{
+    text-align: justify;
+  }
